@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editor de Código - Corrija e Veja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Corrija o Código - Editor Online</h1>
+
+  <div class="questao">
+    <h2>Questão 1: "O fundo da caixa deveria ficar vermelho"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html1">&lt;div class="caixa"&gt;Olá&lt;/div&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css1">.caixa { width: 100px; height: 100px; border: 1px solid black; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js1">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(1)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output1"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 2: "O título precisa ser maior (fonte maior)"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html2">&lt;h3&gt;Título Pequeno&lt;/h3&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css2">h3 { font-size: 16px; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js2">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(2)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output2"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 3: "A caixa principal deveria ter altura de 700px"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html3">&lt;div class="caixa-principal"&gt;Conteúdo&lt;/div&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css3">.caixa-principal { width: 80%; background-color: #f0f0f0; border: 1px solid #ccc; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js3">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(3)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output3"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 4: "Ao passar o mouse sobre a caixa, ela deveria mudar de cor"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html4">&lt;div class="hover-muda-cor"&gt;Passe o mouse aqui&lt;/div&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css4">.hover-muda-cor { width: 150px; height: 50px; background-color: lightgray; text-align: center; line-height: 50px; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js4">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(4)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output4"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 5: "Ao clicar no botão, o texto deveria desaparecer"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html5">&lt;p id="texto-sumir"&gt;Este texto vai desaparecer.&lt;/p&gt;
+&lt;button id="botao-sumir"&gt;Sumir Texto&lt;/button&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css5">// Não necessário para esta questão</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js5">document.getElementById('botao-sumir').addEventListener('click', function() {
+  // Seu código aqui
+});</textarea>
+        <button onclick="atualizarPreview(5)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output5"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 6: "O botão deveria adicionar uma classe na div ao lado"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html6">&lt;button id="botao-adicionar-classe"&gt;Adicionar Classe&lt;/button&gt;
+&lt;div id="minha-div"&gt;Esta é a div.&lt;/div&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css6">#minha-div { width: 100px; height: 50px; background-color: lightblue; margin-top: 10px; }
+.nova-classe { border: 2px solid red; font-weight: bold; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js6">document.getElementById('botao-adicionar-classe').addEventListener('click', function() {
+  // Seu código aqui
+});</textarea>
+        <button onclick="atualizarPreview(6)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output6"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 7: "O parágrafo deveria ter margem de 20px"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html7">&lt;p class="paragrafo-margin"&gt;Este é um parágrafo.&lt;/p&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css7">.paragrafo-margin { background-color: #e0e0e0; padding: 5px; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js7">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(7)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output7"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 8: "A imagem está sem borda, adicione uma borda sólida preta"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html8">&lt;img src="https://via.placeholder.com/150" alt="Imagem sem borda"&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css8">img { }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js8">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(8)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output8"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 9: "O botão deveria exibir um alerta com a mensagem 'Olá!'"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html9">&lt;button id="botao-alerta"&gt;Mostrar Alerta&lt;/button&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css9">// Não necessário para esta questão</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js9">document.getElementById('botao-alerta').addEventListener('click', function() {
+  // Seu código aqui
+});</textarea>
+        <button onclick="atualizarPreview(9)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output9"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 10: "O texto deveria estar centralizado horizontalmente"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html10">&lt;div class="container-texto"&gt;
+  &lt;p&gt;Este texto precisa ser centralizado.&lt;/p&gt;
+&lt;/div&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css10">.container-texto { width: 100%; border: 1px dashed #ccc; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js10">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(10)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output10"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 11: "A caixa deveria ficar com cantos arredondados (border-radius)"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html11">&lt;div class="caixa-arredondada"&gt;Caixa&lt;/div&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css11">.caixa-arredondada { width: 100px; height: 100px; background-color: lightcoral; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js11">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(11)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output11"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 12: "O botão deveria alternar a cor da div entre azul e verde"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html12">&lt;div id="div-muda-cor"&gt;Mude minha cor&lt;/div&gt;
+&lt;button id="botao-alternar-cor"&gt;Alternar Cor&lt;/button&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css12">#div-muda-cor { width: 100px; height: 100px; background-color: blue; margin-top: 10px; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js12">document.getElementById('botao-alternar-cor').addEventListener('click', function() {
+  // Seu código aqui
+});</textarea>
+        <button onclick="atualizarPreview(12)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output12"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 13: "O título deveria aparecer em negrito"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html13">&lt;h4&gt;Este título não está em negrito&lt;/h4&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css13">h4 { font-size: 18px; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js13">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(13)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output13"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 14: "A imagem deveria ficar com 200px de largura"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html14">&lt;img src="https://via.placeholder.com/300x200" alt="Imagem"&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css14">img { height: auto; display: block; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js14">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(14)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output14"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 15: "O botão deveria esconder a imagem ao clicar"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html15">&lt;img id="minha-imagem" src="https://via.placeholder.com/100" alt="Imagem para esconder"&gt;
+&lt;button id="esconder-imagem"&gt;Esconder Imagem&lt;/button&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css15">// Não necessário para esta questão</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js15">document.getElementById('esconder-imagem').addEventListener('click', function() {
+  // Seu código aqui
+});</textarea>
+        <button onclick="atualizarPreview(15)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output15"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 16: "Ao clicar no botão, o fundo da página deveria mudar"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html16">&lt;button id="mudar-fundo"&gt;Mudar Fundo&lt;/button&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css16">body { background-color: #f4f7f6; transition: background-color 0.5s ease; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js16">document.getElementById('mudar-fundo').addEventListener('click', function() {
+  // Seu código aqui
+});</textarea>
+        <button onclick="atualizarPreview(16)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output16"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 17: "A div deveria ter uma sombra suave"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html17">&lt;div class="div-com-sombra"&gt;Com Sombra&lt;/div&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css17">.div-com-sombra { width: 120px; height: 60px; background-color: #e6f7ff; text-align: center; line-height: 60px; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js17">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(17)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output17"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 18: "O texto dentro da div deveria ficar em itálico"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html18">&lt;div class="texto-italico"&gt;Este texto precisa ser itálico.&lt;/div&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css18">.texto-italico { font-size: 1em; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js18">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(18)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output18"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 19: "Ao passar o mouse sobre o botão, ele deveria aumentar de tamanho"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html19">&lt;button class="botao-aumenta"&gt;Passe o mouse&lt;/button&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css19">.botao-aumenta { padding: 10px 15px; background-color: #ffc107; border: none; border-radius: 5px; cursor: pointer; transition: transform 0.3s ease; }</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js19">// Não necessário para esta questão</textarea>
+        <button onclick="atualizarPreview(19)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output19"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 20: "O botão deveria trocar o texto de uma tag &lt;p&gt; ao clicar"</h2>
+    <div class="editor-container">
+      <div class="editor">
+        <label>HTML:</label>
+        <textarea id="html20">&lt;p id="paragrafo-trocar"&gt;Texto inicial.&lt;/p&gt;
+&lt;button id="botao-trocar"&gt;Trocar Texto&lt;/button&gt;</textarea>
+        <label>CSS:</label>
+        <textarea id="css20">// Não necessário para esta questão</textarea>
+        <label>JavaScript:</label>
+        <textarea id="js20">document.getElementById('botao-trocar').addEventListener('click', function() {
+  // Seu código aqui
+});</textarea>
+        <button onclick="atualizarPreview(20)">Executar Código</button>
+      </div>
+      <div class="preview">
+        <iframe id="output20"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
